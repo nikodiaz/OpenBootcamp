@@ -12,10 +12,10 @@ const ContactComponent = ({ contact }) => {
 
   return (
     <div>
-      <h2>Nombre: { contact.name } </h2>
-      <h2>Apellido: { contact.last_name } </h2>
-      <h3>Email: { contact.email } </h3>
-      <h4>Estado: { conection ? 'Contacto En Línea':'Contacto No Disponible' } </h4>
+      <p>Nombre: { contact.name } </p>
+      <p>Apellido: { contact.last_name } </p>
+      <p>Email: { contact.email } </p>
+      <p>Estado: { conection ? 'Contacto En Línea':'Contacto No Disponible' } </p>
       <button onClick={changeConection}>Cambiar Estado</button>
     </div>
   )
