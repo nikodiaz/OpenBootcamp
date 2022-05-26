@@ -1,8 +1,8 @@
 import React from 'react'
+import ComponentB from '../pure/componente-B'
 import { Contact } from '../../models/contact.class'
-import ContactComponent from '../pure/componente-B'
 
-export const ContactList = () => {
+export const ComponentA = () => {
 
   const exampleContact = new Contact('Nicolás', 'Díaz', 'email-example@email.com', true);
 
@@ -13,7 +13,7 @@ export const ContactList = () => {
       </div>
       <div>
         {/* Componente B */}
-        <ContactComponent contact={exampleContact} />
+        <ComponentB contact={exampleContact}/>
       </div>
     </div>
   )

@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Contact } from '../../models/contact.class'
 
-const ContactComponent = ({ contact }) => {
+const ComponentB = ({ contact }) => {
 
-  const [conection, setConection] = useState(contact.conected)
+  
+
+  const [conection, setConection] = useState(contact.status)
 
   const changeConection = () => {
     setConection(conection ? false:true)
@@ -21,8 +23,12 @@ const ContactComponent = ({ contact }) => {
   )
 }
 
-ContactComponent.propTypes = {
-  contact: PropTypes.instanceOf(Contact)
+ComponentB.propTypes = {
+  contact: PropTypes.instanceOf(Contact),
+  name: PropTypes.string,
+  last_name: PropTypes.string,
+  email: PropTypes.string,
+  status: PropTypes.bool,
 }
 
-export default ContactComponent
+export default ComponentB
