@@ -1,0 +1,1 @@
+const edadUsuario = prompt('¿Cuál es su edad?')
