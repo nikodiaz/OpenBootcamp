@@ -7,6 +7,7 @@ parrafos.forEach( parrafo => {
     console.log('Arrastrando el párrafo: ' + parrafo.textContent);
     parrafo.classList.add('draggable');
     e.dataTransfer.setData('id', parrafo.id);
+    e.dataTransfer.effectAllowed = 'move';
   })
   parrafo.addEventListener('dragend', () => {
     console.log('Terminé de arrastrar');
@@ -29,6 +30,7 @@ secciones.forEach( seccion => {
 
 papelera.addEventListener('dragover', e => {
   e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
 })
 
 papelera.addEventListener('drop', e => {
