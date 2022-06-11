@@ -17,9 +17,10 @@ def main():
   with open('fichero.bin','wb') as f:
     pickle.dump(vehiculo1, f)
     f.close()
+  
   with open('fichero.bin','rb') as f:
     siena = pickle.load(f)
-    print(repr(siena))
+    print(repr(siena))  
     f.close()
 
 
