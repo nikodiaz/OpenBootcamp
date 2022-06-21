@@ -5,27 +5,26 @@ import '../../styles/task.scss';
 
 const TaskComponent = ({ task }) => {
 
-  useEffect(() => {
-    console.log('Created Task');
-  
-    return () => {
-      console.log(`Task: ${ task.name } is going to unmount...`);
-    }
-  }, [task])
-  
+  	useEffect(() => {
+    	console.log('Created Task');
 
-  return (
-    <div>
-      <h2>Name: { task.name }</h2>
-      <h3>Description: { task.description }</h3>
-      <h4>Level: { task.level }</h4>
-      <h5>This task is: { task.completed ? 'COMPLETED':'PENDING' }</h5>
-    </div>
-  )
+    	return () => {
+      		console.log(`Task: ${ task.name } is going to unmount...`);
+    	}
+  	}, [task])
+
+  	return (
+    	<div>
+      		<h2>Name: { task.name }</h2>
+      		<p>Description: { task.description }</p>
+      		<h4>Level: { task.level }</h4>
+      		<h5>This task is: { task.completed ? 'COMPLETED':'PENDING' }</h5>
+    	</div>
+  	)
 }
 
 TaskComponent.propTypes = {
-  task: PropTypes.instanceOf(Task),
+  	task: PropTypes.instanceOf( Task ),
 }
 
 export default TaskComponent
